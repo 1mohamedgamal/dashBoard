@@ -9,6 +9,7 @@ import { SharedModule } from '../shared/shared.module';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component: DashBoardComponent },
 
   { path: 'table', component: TableComponent },
   { path: 'ticket', component: TicketComponent },
