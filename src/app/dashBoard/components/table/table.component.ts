@@ -1,13 +1,48 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, AfterViewInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss'],
 })
 export class TableComponent implements AfterViewInit {
+  isEnglish: boolean = true;
+textDir : string = 'ltr';
+  constructor(public translate: TranslateService) {
+    translate.setDefaultLang('en');
+
+translate.onLangChange.subscribe((event : LangChangeEvent ) => {
+
+
+if (event.lang === 'en') {
+  this.textDir = 'ltr'
+}
+else{
+  this.textDir = 'rtl'
+}
+
+
+})
+
+  }
+
+  onChangeLang(lang: string) {
+
+
+
+    this.isEnglish = !this.isEnglish;
+
+    this.translate.use(this.isEnglish ? 'en' : 'ar');
+  }
+
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
