@@ -21,6 +21,7 @@ textDir : string = 'ltr';
 
 translate.onLangChange.subscribe((event : LangChangeEvent ) => {
 
+  // test tesst test
 
 if (event.lang === 'en') {
   this.textDir = 'ltr'
