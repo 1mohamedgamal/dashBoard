@@ -6,10 +6,10 @@ import { TableComponent } from './components/table/table.component';
 import { TicketComponent } from './components/ticket/ticket.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
-
+import { TranslateModule } from '@ngx-translate/core';
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashBoardComponent },
+  { path: '', component: DashBoardComponent },
 
   { path: 'table', component: TableComponent },
   { path: 'ticket', component: TicketComponent },
@@ -17,7 +17,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [CommonModule, RouterModule.forChild(routes), SharedModule],
+  imports: [CommonModule,TranslateModule, RouterModule.forChild(routes), SharedModule],
 
   declarations: [
     DashBoardComponent,

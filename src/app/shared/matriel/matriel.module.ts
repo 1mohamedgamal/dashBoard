@@ -15,10 +15,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 const MaterialComponents = [
   MatButtonModule,
-  MatIconModule,
+  MatIconModule,MatSlideToggleModule,
   MatDialogModule,
   MatFormFieldModule,
   MatInputModule,
