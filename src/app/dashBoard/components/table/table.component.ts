@@ -15,29 +15,26 @@ export function createTranslateLoader(http: HttpClient) {
 })
 export class TableComponent implements AfterViewInit {
   isEnglish: boolean = true;
-textDir : string = 'ltr';
+  textDir: string = 'ltr';
+
+  selectedLang: string = 'en'; // Default language is 'en'
+
   constructor(public translate: TranslateService) {
     translate.setDefaultLang('en');
 
-translate.onLangChange.subscribe((event : LangChangeEvent ) => {
+    translate.onLangChange.subscribe((event: LangChangeEvent) => {
+      // test tesst test
 
-  // test tesst test
-
-if (event.lang === 'en') {
-  this.textDir = 'ltr'
-}
-else{
-  this.textDir = 'rtl'
-}
-
-
-})
-
+      if (event.lang === 'en') {
+        this.textDir = 'ltr';
+      } else {
+        this.textDir = 'rtl';
+      }
+    });
   }
 
   onChangeLang(lang: string) {
-
-
+    this.selectedLang = this.isEnglish ? 'ar' : 'en';
 
     this.isEnglish = !this.isEnglish;
 

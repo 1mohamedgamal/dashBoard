@@ -2,9 +2,9 @@
   <mat-slide-toggle
     (click)="onChangeLang('ar')"
     class="d-flex justify-content-start py-5"
-    
-    >Slide me!</mat-slide-toggle
   >
+    {{ selectedLang === "ar" ? "Ar" : "En" }}
+  </mat-slide-toggle>
 
   <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource">

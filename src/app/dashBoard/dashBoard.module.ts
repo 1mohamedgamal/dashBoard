@@ -7,6 +7,7 @@ import { TicketComponent } from './components/ticket/ticket.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { TranslateModule } from '@ngx-translate/core';
+import { NavbarComponent } from './components/navbar/navbar/navbar.component';
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: '', component: DashBoardComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
 
     TableComponent,
     TicketComponent,
+    NavbarComponent,
   ],
 })
 export class DashBoardModule {}
