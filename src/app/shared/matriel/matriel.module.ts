@@ -16,10 +16,12 @@ import { MatListModule } from '@angular/material/list';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 const MaterialComponents = [
   MatButtonModule,
-  MatIconModule,MatSlideToggleModule,
+  MatIconModule,MatButtonToggleModule,
+  MatSlideToggleModule,
   MatDialogModule,
   MatFormFieldModule,
   MatInputModule,
