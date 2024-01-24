@@ -8,6 +8,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { NavbarComponent } from './components/navbar/navbar/navbar.component';
+import { GraphComponent } from './components/graph/graph.component';
+import { CardsComponent } from './components/cards/cards.component';
+import { ThemeswitchComponent } from './components/themeswitch/themeswitch.component';
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: '', component: DashBoardComponent },
@@ -15,10 +18,17 @@ const routes: Routes = [
   { path: 'table', component: TableComponent },
   { path: 'ticket', component: TicketComponent },
   { path: 'charts', component: ChartsComponent },
+  { path: 'graph', component: GraphComponent },
+  { path: 'cards', component: CardsComponent },
 ];
 
 @NgModule({
-  imports: [CommonModule,TranslateModule, RouterModule.forChild(routes), SharedModule],
+  imports: [
+    CommonModule,
+    TranslateModule,
+    RouterModule.forChild(routes),
+    SharedModule,
+  ],
 
   declarations: [
     DashBoardComponent,
@@ -27,6 +37,9 @@ const routes: Routes = [
     TableComponent,
     TicketComponent,
     NavbarComponent,
+    GraphComponent,
+    CardsComponent,
+    ThemeswitchComponent,
   ],
 })
 export class DashBoardModule {}

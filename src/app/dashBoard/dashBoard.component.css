@@ -1,0 +1,25 @@
+/* app.component.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-6 {
+  flex: 0 0 50%; /* 50% width on larger screens, adjust as needed */
+}
+
+.col-12 {
+  flex: 0 0 100%; /* Full width on larger screens */
+}
+
+
